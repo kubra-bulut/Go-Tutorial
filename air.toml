@@ -1,0 +1,9 @@
+root = "."  # The root directory of the project
+tmp_dir = "tmp"  # Temporary directory where air will store its temporary files
+
+[build]  # The build configuration
+    bin = "tmp/main"  # The name and location of the binary file to be generated after building the project
+    cmd = "go build -o tmp/main"  # Command to build the project and output to tmp
+    exclude = ["tmp/*", "client/*"]  # Directories to be excluded from monitoring for changes
+    include = ["**/*.go"]  # File patterns to be included for monitoring
+    ignore = ["tmp/*"]  # Files or directories to be ignored when triggering a build
