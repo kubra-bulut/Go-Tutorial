@@ -7,6 +7,7 @@ import (
 	"strconv"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	_ "github.com/lib/pq"
 )
 
@@ -23,6 +24,10 @@ func main() {
 	initDB()
 	app := fiber.New()
 
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "http://localhost:5173",
+		AllowHeaders: "Origin, Content-Type,Accept",
+	}))
 	// Routes
 	app.Get("/api/todos", getAllTodos)
 	app.Post("/api/todos", createTodo)
