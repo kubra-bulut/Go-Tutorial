@@ -1,4 +1,4 @@
-# Go-Tutorial 🚀
+# A ToDo Web Site Tutorial 🚀
 
 This repository contains a Go project built by following the tutorial [Build a REST API with Go](https://www.youtube.com/watch?v=lNd7XlXwlho&ab_channel=freeCodeCamp.org) from freeCodeCamp.org. The project demonstrates how to build a REST API using Go and integrates with PostgreSQL for database operations.
 
